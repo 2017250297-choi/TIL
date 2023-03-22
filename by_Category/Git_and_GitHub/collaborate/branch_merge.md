@@ -24,7 +24,7 @@ Branch는 원래 코드와는 상관없이 독립적으로 개발을 진행할 �
 2. github-flow: main branch가 중심이된다. main branch는 어떤때든 배포가 가능한 최신 상태이고, 새로운 작업을 위한 branch의 명칭은 알아보기 쉽게 작성한다. 또한 항상 branch들을 원격repo에도 push하여 모두가 확인할 수 있게한다. 가 기준의 역활만 명확히 하면 이외 branch에 는 크게 관여하지 않는다. 흐름이 비교적 단순하며 Pull request를 권장한다. release branch가 명확하지 않은 시스템에서 사용하기 좋다.
 
 ## git merge --no-ff:
-기준이 될 branch(main)으로 checkout 한 뒤 `git branch merge <branch명>`을 입력하면 merge를 진행한다. 이때 `--no-ff`옵션을 사용해주면 좋다. 이 옵션은 source tree에서 '[fastforward](/by_Category/Git_and_GitHub/collaborate/fast-forward.md)'가 가능해도 새 커밋 생성 옵션을 선택한 것과 같다. `--log`옵션을 사용할 경우 merge할 branch의 commit message를 새 commit에 기록한다.
+기준이 될 branch(main)으로 checkout 한 뒤 `git branch merge <branch명>`을 입력하면 merge를 진행한다. 이때 `--no-ff`옵션을 사용해주면 좋다. 이 옵션은 source tree에서 '[fastforward](/by_Category/Git_and_GitHub/collaborate/fast_forward.md)'가 가능해도 새 커밋 생성 옵션을 선택한 것과 같다. `--log`옵션을 사용할 경우 merge할 branch의 commit message를 새 commit에 기록한다.
 이후 쓸모가 없는 branch는 삭제해도 된다.
 
 ## merge-conflict
