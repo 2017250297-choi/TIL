@@ -1,11 +1,11 @@
 class Car:
-    color = 'red'
+    color = "red"
 
     def __init__(self, model, color, speed):
         self.model = model
         self.color = color
         self.speed = speed
-        self.speed_limit = speed*2
+        self.speed_limit = speed * 2
 
     def accelerate(self, dv):
         dv = 0 if 0 > dv else dv
@@ -15,11 +15,11 @@ class Car:
         dv = 0 if 0 > dv else dv
         self.speed = max(0, self.speed - dv)
 
-    def get_speed(self, unit='kph'):
-        if unit == 'kph':
+    def get_speed(self, unit="kph"):
+        if unit == "kph":
             return self.speed
-        elif unit == 'mps':
-            return self.speed/3.6
+        elif unit == "mps":
+            return self.speed / 3.6
         else:
             raise ValueError()
 
@@ -27,8 +27,12 @@ class Car:
         print("Brrrr")
 
 
-my_car = Car('bugati', 'blue', 30)
+my_car = Car("bugati", "blue", 30)
 my_car.drive()
+import json
+
+a = json.dumps(my_car)
+print(str(a))
 
 
 class Animal:
@@ -68,7 +72,7 @@ class Circle(Shape):
         self.radius = radius
 
     def get_area(self):
-        return 3.14*self.radius**2
+        return 3.14 * self.radius**2
 
 
 class Square(Shape):
@@ -85,4 +89,4 @@ class Rectangle(Shape):
         self.height = height
 
     def get_area(self):
-        return self.width*self.height
+        return self.width * self.height
